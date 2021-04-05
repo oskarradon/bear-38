@@ -41,6 +41,11 @@
 
 /* type styles */
 
+body {
+  font-size: 18px;
+  color: var(--white);
+}
+
 h1, h2, p {
   font-family: "Copernicus";
 }
@@ -60,8 +65,8 @@ h2 {
 
 p {
   font-weight: 400;
-  font-size: 21px;
-  line-height: 29px;
+  font-size: 18px;
+  line-height: 25px;
 }
 
 /* media queries */
@@ -74,4 +79,11 @@ p {
   h1 {
     font-size: 36px;
   }
+
+  p {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 29px;
+}
+
 }
