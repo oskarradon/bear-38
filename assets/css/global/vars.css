@@ -1,5 +1,9 @@
 :root {
-  --orange:    #FFA172;
-  --purple:    #9056A1;
-  --blue:      #154F97;
+  --orange:      #FFA172;
+  --orange-dark: #fd9a69;
+  --purple:      #9056A1;
+  --blue:        #154F97;
+  --black:       #1b1b1b;
+  --white:       white;
+  --w:             680px;
 }
