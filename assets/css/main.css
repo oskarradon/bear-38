@@ -3,4 +3,6 @@
 @import 'global/vars.css';
 @import 'global/typography.css';
 
+@import 'components/header.css';
+
 @import 'templates/home.css';
