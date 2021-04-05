@@ -1,0 +1,30 @@
+header {
+  padding: 20px;
+  width: 100vw;
+  position: fixed;
+}
+
+header .inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  color: var(--white);
+}
+
+#logo #name {
+  text-transform: uppercase;
+}
+
+#logo #issue {
+  font-weight: 200;
+}
+
+@media (min-width: 700px) {
+  header {
+    padding: none;
+  }
+}
