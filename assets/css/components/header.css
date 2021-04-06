@@ -25,6 +25,7 @@ header .inner {
 
 @media (min-width: 700px) {
   header {
-    padding: none;
+    padding: 0px;
+    margin-left: -10px;
   }
 }
