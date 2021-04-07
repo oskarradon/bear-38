@@ -4,5 +4,6 @@
 @import 'global/typography.css';
 
 @import 'components/header.css';
+@import 'components/footer.css';
 
 @import 'templates/home.css';
