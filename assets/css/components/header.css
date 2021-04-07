@@ -27,18 +27,6 @@ header .inner {
   align-items: center;
 }
 
-#logo {
-  color: var(--white);
-}
-
-#logo #name {
-  text-transform: uppercase;
-}
-
-#logo #issue {
-  font-weight: 200;
-}
-
 @media (min-width: 720px) {
   header #header-container {
     margin-left: -10px;
