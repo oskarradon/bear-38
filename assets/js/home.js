@@ -46,25 +46,31 @@ function setMarginRight(el, val) {
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    offsetButton()
+    offsetItems()
   },
   false
 )
 
-function offsetButton() {
+function offsetItems() {
   let screenWidth = getScreenWidth(),
     scrollbarWidth = getScrollbarWidth(),
-    offset = scrollbarWidth + 35
-
-  let button = document.querySelector('#btn-order')
+    offset = scrollbarWidth + 40,
+    button1 = document.querySelector('#btn-order'),
+    button2 = document.querySelector('#btn-orlo'),
+    copyright = document.querySelector('footer p'),
+    elements = [button1, button2, copyright]
 
   if (screenWidth <= 720) {
-    setMarginRight(button, offset)
+    for (const element of elements) {
+      setMarginRight(element, offset)
+    }
   } else {
-    setMarginRight(button, 0)
+    for (const element of elements) {
+      setMarginRight(element, 0)
+    }
   }
 }
 
 window.addEventListener('resize', () => {
-  offsetButton()
+  offsetItems()
 })
