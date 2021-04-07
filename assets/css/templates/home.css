@@ -1,5 +1,18 @@
 body {
   color: var(--white);
+  overflow-x: hidden;
+}
+
+.logo {
+  color: var(--white);
+}
+
+.logo .name {
+  text-transform: uppercase;
+}
+
+.logo .issue {
+  font-weight: 200;
 }
 
 a,
@@ -10,7 +23,7 @@ a:visited {
   display: inline-block;
 }
 
-a:after {
+a:not(.button):after {
   display: block;
   content: '';
   border-bottom: solid 2px var(--white);
@@ -113,10 +126,23 @@ h3.description {
   margin-top: 0px;
 }
 
+#artists h2:nth-of-type(2) {
+  margin-top: 120px;
+}
+
 #colophon {
   background: url('/assets/img/BDM_Endpages_fire.png'), var(--orange);
   background-size: cover;
   background-blend-mode: lighten;
+}
+
+#colophon article {
+  margin-bottom: 60px;
+}
+
+#footer-img {
+  width: 100vw;
+  margin-bottom: -6px;
 }
 
 @media (min-width: 720px) {
