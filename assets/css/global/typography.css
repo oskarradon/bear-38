@@ -1,40 +1,39 @@
-
 /* font face declarations */
 
 @font-face {
-  font-family: "ProtoGrotesk";
-  src: url("/assets/fonts/ProtoGrotesk-Regular.otf") format("opentype");
+  font-family: 'ProtoGrotesk';
+  src: url('/assets/fonts/ProtoGrotesk-Regular.otf') format('opentype');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "ProtoGrotesk";
-  src: url("/assets/fonts/ProtoGrotesk-Light.otf") format("opentype");
+  font-family: 'ProtoGrotesk';
+  src: url('/assets/fonts/ProtoGrotesk-Light.otf') format('opentype');
   font-weight: 200;
 }
 
 @font-face {
-  font-family: "Copernicus";
-  src: url("/assets/fonts/Copernicus-Book.otf") format("opentype");
+  font-family: 'Copernicus';
+  src: url('/assets/fonts/Copernicus-Book.otf') format('opentype');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Copernicus";
-  src: url("/assets/fonts/Copernicus-BookItalic.otf") format("opentype");
+  font-family: 'Copernicus';
+  src: url('/assets/fonts/Copernicus-BookItalic.otf') format('opentype');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: "Copernicus";
-  src: url("/assets/fonts/Copernicus-Bold.otf") format("opentype");
+  font-family: 'Copernicus';
+  src: url('/assets/fonts/Copernicus-Bold.otf') format('opentype');
   font-weight: 700;
 }
 
 @font-face {
-  font-family: "Copernicus";
-  src: url("/assets/fonts/Copernicus-BoldItalic.otf") format("opentype");
+  font-family: 'Copernicus';
+  src: url('/assets/fonts/Copernicus-BoldItalic.otf') format('opentype');
   font-weight: 700;
   font-style: italic;
 }
@@ -46,11 +45,14 @@ body {
   /* color: var(--white); */
 }
 
-h1, h2, p {
-  font-family: "Copernicus";
+h1,
+h2,
+p {
+  font-family: 'Copernicus';
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 700;
 }
 
@@ -69,14 +71,16 @@ p {
   line-height: 25px;
 }
 
+h3,
 figcaption {
-  font-family: "ProtoGrotesk";
+  font-family: 'ProtoGrotesk';
   font-weight: 200;
+  font-size: 20px;
 }
 
-header span, 
+header span,
 header a {
-  font-family: "ProtoGrotesk";
+  font-family: 'ProtoGrotesk';
 }
 
 /* media queries */
@@ -90,10 +94,14 @@ header a {
     font-size: 36px;
   }
 
-  p {
-  font-weight: 400;
-  font-size: 21px;
-  line-height: 29px;
-}
+  h3,
+  figcaption {
+    font-size: 22px;
+  }
 
+  p {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 29px;
+  }
 }
