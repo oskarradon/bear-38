@@ -23,129 +23,130 @@
         <img id="hero-img" src="assets/img/cover-bg.png" alt="">
       </div>
     </section>
-    <div id="gradient"></div>
-    <section>
-      <div class="inner">
-        <h1>About this project</h1>
-        <p>A/PART is issue #38 of The Bear magazine, formerly published as the Bear Deluxe, an independent, Pacific
-        Northwest-based, nationally distributed magazine exploring environmental issues through the creative arts.</p>
-        <p>This issue was created as a time capsule brimming not only with art, but with the stories of the humans making art in
-        this moment (2020–2021). Rather than paint a broad picture, A/PART reveals bright glimpses of what it looks like to
-        fight, to grieve, to celebrate, and to take up space. A/PART grapples with a sense of urgency at the intersections of
-        place-based art, identity, and the environment in an expansive sense.</p>
-      </div>
-    </section>
-    <section>
-      <div class="inner">
-        <h1>Get your copy</h1>
-        <div id="smart-button-container">
-          <div style="text-align: center;">
-            <div id="paypal-button-container"></div>
-          </div>
+    <div id="gradient">
+      <section>
+        <div class="inner">
+          <h1>About this project</h1>
+          <p>A/PART is issue #38 of The Bear magazine, formerly published as the Bear Deluxe, an independent, Pacific
+          Northwest-based, nationally distributed magazine exploring environmental issues through the creative arts.</p>
+          <p>This issue was created as a time capsule brimming not only with art, but with the stories of the humans making art in
+          this moment (2020–2021). Rather than paint a broad picture, A/PART reveals bright glimpses of what it looks like to
+          fight, to grieve, to celebrate, and to take up space. A/PART grapples with a sense of urgency at the intersections of
+          place-based art, identity, and the environment in an expansive sense.</p>
         </div>
-        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"
-          data-sdk-integration-source="button-factory"></script>
-        <script>
-          function initPayPalButton() {
-            paypal.Buttons({
-              style: {
-                shape: 'rect',
-                color: 'gold',
-                layout: 'vertical',
-                label: 'paypal',
+      </section>
+      <section>
+        <div class="inner">
+          <h1>Get your copy</h1>
+          <div id="smart-button-container">
+            <div style="text-align: center;">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+          <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"
+            data-sdk-integration-source="button-factory"></script>
+          <script>
+            function initPayPalButton() {
+              paypal.Buttons({
+                style: {
+                  shape: 'rect',
+                  color: 'gold',
+                  layout: 'vertical',
+                  label: 'paypal',
 
-              },
+                },
 
-              createOrder: function (data, actions) {
-                return actions.order.create({
-                  purchase_units: [{ "amount": { "currency_code": "USD", "value": 1 } }]
-                });
-              },
+                createOrder: function (data, actions) {
+                  return actions.order.create({
+                    purchase_units: [{ "amount": { "currency_code": "USD", "value": 1 } }]
+                  });
+                },
 
-              onApprove: function (data, actions) {
-                return actions.order.capture().then(function (details) {
-                  alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-              },
+                onApprove: function (data, actions) {
+                  return actions.order.capture().then(function (details) {
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                  });
+                },
 
-              onError: function (err) {
-                console.log(err);
-              }
-            }).render('#paypal-button-container');
-          }
-          initPayPalButton();
-        </script>
-        <p>Five creators served as sponsors and connectors to five artists who inspire them, a chance to reconnect or to build new
-        relationships. Their works and words are woven together in conversation in these pages.</p>
-      </div>
-    </section>
-    <section>
-      <div class="inner">
-        <h2>Featured artists</h2>
-        <h2>Sponsoring artists and organizations</h2>
-        <figure>
-          <img src="assets/img/artists/Jayy_Dodd_by_Kenn_Amethyst.jpg" alt="" srcset="">
-          <figcaption>jayy dodd</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/Maya Vivas- Headshot_UPDATED.jpg" alt="" srcset="">
-          <figcaption>Maya Vivas</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/Joe_Whittle_NativeGrad.jpg" alt="" srcset="">
-          <figcaption>Joe Whittle</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/Portland_In_Color.jpg" alt="" srcset="">
-          <figcaption>Portland in Color</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/RYAN!_Feddersen_PHA.jpg" alt="" srcset="">
-          <figcaption>RYAN! Feddersen</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/Ka_ila_Farrell_Smith.jpg" alt="" srcset="">
-          <figcaption>Ka'ila Farrell-Smith</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/chad_bio.jpg" alt="" srcset="">
-          <figcaption>Chad Brown</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/Soul_River_bio.jpg" alt="" srcset="">
-          <figcaption>Soul River</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/Estella_Tse.jpg" alt="" srcset="">
-          <figcaption>Estella Tse</figcaption>
-        </figure>
-        <figure>
-          <img src="assets/img/artists/Marcelino_Alvarez.jpg" alt="" srcset="">
-          <figcaption>Marcelino Alvarez</figcaption>
-        </figure>
-      </div>
-    </section>
-    <section>
-      <h2>Creative Directors</h2>
-      <h3>Kristin Rogers Brown</h3>
-      <h3>Ryan Brown</h3>
+                onError: function (err) {
+                  console.log(err);
+                }
+              }).render('#paypal-button-container');
+            }
+            initPayPalButton();
+          </script>
+          <p>Five creators served as sponsors and connectors to five artists who inspire them, a chance to reconnect or to build new
+          relationships. Their works and words are woven together in conversation in these pages.</p>
+        </div>
+      </section>
+      <section>
+        <div class="inner">
+          <h2>Featured artists</h2>
+          <h2>Sponsoring artists and organizations</h2>
+          <figure>
+            <img src="assets/img/artists/Jayy_Dodd_by_Kenn_Amethyst.jpg" alt="" srcset="">
+            <figcaption>jayy dodd</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/Maya Vivas- Headshot_UPDATED.jpg" alt="" srcset="">
+            <figcaption>Maya Vivas</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/Joe_Whittle_NativeGrad.jpg" alt="" srcset="">
+            <figcaption>Joe Whittle</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/Portland_In_Color.jpg" alt="" srcset="">
+            <figcaption>Portland in Color</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/RYAN!_Feddersen_PHA.jpg" alt="" srcset="">
+            <figcaption>RYAN! Feddersen</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/Ka_ila_Farrell_Smith.jpg" alt="" srcset="">
+            <figcaption>Ka'ila Farrell-Smith</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/chad_bio.jpg" alt="" srcset="">
+            <figcaption>Chad Brown</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/Soul_River_bio.jpg" alt="" srcset="">
+            <figcaption>Soul River</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/Estella_Tse.jpg" alt="" srcset="">
+            <figcaption>Estella Tse</figcaption>
+          </figure>
+          <figure>
+            <img src="assets/img/artists/Marcelino_Alvarez.jpg" alt="" srcset="">
+            <figcaption>Marcelino Alvarez</figcaption>
+          </figure>
+        </div>
+      </section>
+      <section>
+        <h2>Creative Directors</h2>
+        <h3>Kristin Rogers Brown</h3>
+        <h3>Ryan Brown</h3>
 
-      <h2>Copy Editor</h2>
-      <h3>Des Hawson</h3>
+        <h2>Copy Editor</h2>
+        <h3>Des Hawson</h3>
 
-      <h2>Board of Directors</h2>
-      <h3>Sam Beebe</h3>
-      <h3 class="description">Executive Director</h3>
-      <h3>Molly Cooney-Mesker</h3>
-      <h3 class="description">Board Chair</h3>
-      <h3>Tom Webb</h3>
-      <h3 class="description">Board Secretary & Founding Editor</h3>
+        <h2>Board of Directors</h2>
+        <h3>Sam Beebe</h3>
+        <h3 class="description">Executive Director</h3>
+        <h3>Molly Cooney-Mesker</h3>
+        <h3 class="description">Board Chair</h3>
+        <h3>Tom Webb</h3>
+        <h3 class="description">Board Secretary & Founding Editor</h3>
 
-      <p>The Bear is published by the nonprofit, volunteer-run organization Orlo.</p>
+        <p>The Bear is published by the nonprofit, volunteer-run organization Orlo.</p>
 
-      <p>Made with generous support from <a href="">The Kinsman Foundation</a> and additional contributions from <a href=""></a>Willamette Falls Paper Company</a>,
-      <a href=""></a>WCP Solutions</a>, and <a href=""></a>Brown Printing</a>.</p>
-    </section>
+        <p>Made with generous support from <a href="">The Kinsman Foundation</a> and additional contributions from <a href=""></a>Willamette Falls Paper Company</a>,
+        <a href=""></a>WCP Solutions</a>, and <a href=""></a>Brown Printing</a>.</p>
+      </section>
+    </div>
   </main>
   <footer>
     <div class="inner">
