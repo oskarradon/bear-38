@@ -1,3 +1,7 @@
+body {
+  color: var(--white);
+}
+
 section {
   padding: 20px;
   z-index: 2;
@@ -10,12 +14,13 @@ section {
 }
 
 #gradient {
-  z-index: -99;
+  /* z-index: -99;
   position: absolute;
   top: 800px;
   height: 3000px;
-  width: 100vw;
-  /* background-image: linear-gradient(180deg, rgba(195,143,207,0.00) 0%, #9056A1 7%, #9056A1 29%, #FFA172 78%, #FFA172 86%, rgba(255,161,114,0.00) 100%); */
+  width: 100vw; */
+  margin-top: -100px;
+  background-image: linear-gradient(180deg, rgba(195,143,207,0.00) 0%, #9056A1 1%, #9056A1 29%, #FFA172 78%, #FFA172 86%, rgba(255,161,114,0.00) 100%);
 }
 
 section#hero {
@@ -26,7 +31,8 @@ section#hero {
 #hero-img {
   object-fit: cover;
   width: 200%;
-  margin-left: -50%;
+  margin-left: ;
+  margin: 20px 0 80px -50%;
 }
 
 .button {
@@ -50,11 +56,6 @@ figure,
 figure img {
   max-width: 100%;
   margin: 0px;
-}
-
-header span, 
-header a {
-  font-family: "ProtoGrotesk";
 }
 
 @media (min-width: 700px) {
