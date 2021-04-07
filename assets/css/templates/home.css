@@ -20,11 +20,19 @@ section {
   height: 3000px;
   width: 100vw; */
   margin-top: -100px;
-  background-image: linear-gradient(180deg, rgba(195,143,207,0.00) 0%, #9056A1 1%, #9056A1 29%, #FFA172 78%, #FFA172 86%, rgba(255,161,114,0.00) 100%);
+  background-image: linear-gradient(
+    180deg,
+    rgba(195, 143, 207, 0) 0%,
+    #9056a1 1%,
+    #9056a1 29%,
+    #ffa172 78%,
+    #ffa172 86%,
+    rgba(255, 161, 114, 0) 100%
+  );
 }
 
 section#hero {
-  padding-top: 80px;
+  padding-top: 120px;
   background: url(/assets/img/DA7A6121_Alaska.jpg) center no-repeat;
 }
 
@@ -47,24 +55,29 @@ section#hero {
   text-transform: uppercase;
 }
 
+#order {
+  position: relative;
+  top: -100px;
+}
+
 .button:hover,
 .button:active {
   background: var(--orange-dark);
 }
 
-figure, 
+figure,
 figure img {
   max-width: 100%;
   margin: 0px;
 }
 
-@media (min-width: 700px) {
-  .button {
-  height: 55px;
-  line-height: 52px;
-  }
+#paypal-button-container {
+  z-index: -999 !important;
+}
 
-  section#hero {
-    padding-top: 80px;
+@media (min-width: 720px) {
+  .button {
+    height: 55px;
+    line-height: 52px;
   }
 }
