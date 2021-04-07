@@ -46,9 +46,7 @@ function setMarginRight(el, val) {
 document.addEventListener(
   'DOMContentLoaded',
   () => {
-    if (checkScrollbar()) {
-      offsetButton()
-    }
+    offsetButton()
   },
   false
 )
@@ -59,8 +57,10 @@ function offsetButton() {
     offset = scrollbarWidth + 35
 
   let button = document.querySelector('#btn-order')
-  setMarginRight(button, offset)
-  if (screenWidth >= 720) {
+
+  if (screenWidth <= 720) {
+    setMarginRight(button, offset)
+  } else {
     setMarginRight(button, 0)
   }
 }
