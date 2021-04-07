@@ -23,9 +23,10 @@ header .inner {
   font-weight: 200;
 }
 
+
 @media (min-width: 700px) {
   header {
-    padding: 0px;
+    padding: 20px 0;
     margin-left: -10px;
   }
 }
