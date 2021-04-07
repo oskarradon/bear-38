@@ -38,24 +38,33 @@ function getScreenWidth() {
   return width
 }
 
-function offsetRight(el) {
-  let sb = getScrollbarWidth()
-  el.style.marginRight = sb + 35 + 'px'
-  console.log(checkScrollbar(), getScrollbarWidth())
-  console.log(document.querySelector('#btn-order').style.marginRight)
+function setMarginRight(el, val) {
+  el.style.marginRight = val + 'px'
+  console.log(el.style.marginRight)
 }
 
 document.addEventListener(
   'DOMContentLoaded',
   () => {
     if (checkScrollbar()) {
-      let button = document.querySelector('#btn-order')
-      offsetRight(button)
+      offsetButton()
     }
   },
   false
 )
 
+function offsetButton() {
+  let screenWidth = getScreenWidth(),
+    scrollbarWidth = getScrollbarWidth(),
+    offset = scrollbarWidth + 35
+
+  let button = document.querySelector('#btn-order')
+  setMarginRight(button, offset)
+  if (screenWidth >= 720) {
+    setMarginRight(button, 0)
+  }
+}
+
 window.addEventListener('resize', () => {
-  console.log(getScreenWidth())
+  offsetButton()
 })
