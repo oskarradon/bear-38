@@ -74,6 +74,11 @@ figcaption {
   font-weight: 200;
 }
 
+header span, 
+header a {
+  font-family: "ProtoGrotesk";
+}
+
 /* media queries */
 
 @media (min-width: 710px) {
