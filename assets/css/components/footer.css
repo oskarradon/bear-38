@@ -1,5 +1,5 @@
 footer {
-  background: var(--blue);
+  background: url('/assets/img/Subtle\ Distress\ 15_white.png'), var(--blue);
   padding-top: 20px;
 }
 
