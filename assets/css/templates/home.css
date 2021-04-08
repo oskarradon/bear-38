@@ -67,6 +67,7 @@ section {
 section#hero {
   padding-top: 120px;
   background: url(/assets/img/DA7A6121_Alaska.jpg) center no-repeat;
+  background-size: cover;
 }
 
 #hero-img {
