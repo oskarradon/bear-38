@@ -54,7 +54,7 @@ document.addEventListener(
 function offsetItems() {
   let screenWidth = getScreenWidth(),
     scrollbarWidth = getScrollbarWidth(),
-    offset1 = scrollbarWidth + 40,
+    offset1 = scrollbarWidth + 20,
     offset2 = scrollbarWidth + 25,
     button1 = document.querySelector('#btn-order'),
     button2 = document.querySelector('#btn-orlo'),
@@ -63,7 +63,7 @@ function offsetItems() {
 
   if (screenWidth <= 720) {
     setMarginRight(button1, offset1)
-    setMarginRight(button2, offset2)
+    // setMarginRight(button2, offset2)
     setMarginRight(copyright, offset2)
   } else {
     for (const element of elements) {
