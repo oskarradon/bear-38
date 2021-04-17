@@ -94,6 +94,7 @@ footer a {
 @media (min-width: 710px) {
   h1 {
     font-size: 48px;
+    margin-bottom: 2.5rem;
   }
 
   h1 {
