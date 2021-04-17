@@ -3,6 +3,10 @@ footer {
   padding-top: 20px;
 }
 
+footer p {
+  font-size: 18px;
+}
+
 footer .inner {
   padding: 40px 20px;
   display: flex;
@@ -20,5 +24,14 @@ footer .container {
 }
 
 #btn-orlo {
-  width: calc(100% - 40px);
+  width: 100%;
+}
+
+footer #credit {
+  font-family: 'ProtoGrotesk';
+  font-weight: 200;
+}
+
+footer #credit img {
+  width: 14px;
 }
