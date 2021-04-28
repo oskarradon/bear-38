@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html class="no-js" lang="" itemscope itemtype="https://schema.org/Article">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>The Bear #38: A/PART</title>
+
+    <meta
+      name="description"
+      content="A/PART is issue #38 of The Bear magazine, formerly published as the Bear Deluxe, an independent, Pacific Northwest-based, nationally distributed magazine exploring environmental issues through the creative arts."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:url" content="https://bear.orlo.org/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Bear #38: A/PART" />
+    <meta property="og:image" content="assets/img/head/orlo-og.png" />
+    <meta
+      property="og:description"
+      content="A/PART is issue #38 of The Bear magazine, formerly published as the Bear Deluxe, an independent, Pacific Northwest-based, nationally distributed magazine exploring environmental issues through the creative arts."
+    />
+    <meta property="og:site_name" content="The Bear #38" />
+    <meta property="article:author" content="Oskar Radon" />
+
+    <!-- Twitter cards -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@orlobear" />
+    <meta name="twitter:url" content="https://bear.orlo.org/" />
+    <meta name="twitter:title" content="The Bear #38: A/PART" />
+    <meta
+      name="twitter:description"
+      content="A/PART is issue #38 of The Bear magazine, formerly published as the Bear Deluxe, an independent, Pacific Northwest-based, nationally distributed magazine exploring environmental issues through the creative arts."
+    />
+    <meta name="twitter:image" content="assets/img/head/orlo-twt.png" />
+
+    <!-- Schema.org -->
+    <link rel="author" href="Oskar Radon" />
+    <link rel="publisher" href="Orlo" />
+    <meta itemprop="name" content="The Bear #38: A/PART" />
+    <meta
+      itemprop="description"
+      content="A/PART is issue #38 of The Bear magazine, formerly published as the Bear Deluxe, an independent, Pacific Northwest-based, nationally distributed magazine exploring environmental issues through the creative arts."
+    />
+    <meta itemprop="image" content="assets/img/head/orlo-og.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="assets/css/main.min.css" />
+
+    <meta name="theme-color" content="#9056a1" />
+  </head>
+
+  <body>
+    <header>
+      <div id="header-container">
+        <div class="inner">
+          <div class="logo">
+            <span class="name">The Bear</span>
+            <span class="issue">#38: A/PART</span>
+          </div>
+          <a id="btn-order" class="button" href="#order">Order</a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="inner">
+          <img
+            id="hero-img"
+            class="full-img"
+            src="assets/img/cover-bg.png"
+            alt=""
+          />
+        </div>
+      </section>
+      <div id="gradient">
+        <section>
+          <div class="inner">
+            <h1>About this project</h1>
+            <p>
+              A/PART is issue #38 of The Bear magazine, formerly published as
+              the Bear Deluxe, an independent, Pacific Northwest-based,
+              nationally distributed magazine exploring environmental issues
+              through the creative arts.
+            </p>
+            <p>
+              This issue was created as a time capsule brimming not only with
+              art, but with the stories of the humans making art in this moment
+              (2020–2021). Rather than paint a broad picture, A/PART reveals
+              bright glimpses of what it looks like to fight, to grieve, to
+              celebrate, and to take up space. A/PART grapples with a sense of
+              urgency at the intersections of place-based art, identity, and the
+              environment in an expansive sense.
+            </p>
+          </div>
+        </section>
+        <section>
+          <div id="order"></div>
+          <div class="inner">
+            <h1>Get your copy</h1>
+            <div style="text-align: center">
+              <div id="paypal-button-container"></div>
+            </div>
+          </div>
+          <script
+            src="https://www.paypal.com/sdk/js?client-id=sb&currency=USD"
+            data-sdk-integration-source="button-factory"
+          ></script>
+          <script>
+            function initPayPalButton() {
+              paypal
+                .Buttons({
+                  style: {
+                    shape: 'rect',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'paypal',
+                  },
+
+                  createOrder: function (data, actions) {
+                    return actions.order.create({
+                      purchase_units: [
+                        { amount: { currency_code: 'USD', value: 10 } },
+                      ],
+                    })
+                  },
+
+                  onApprove: function (data, actions) {
+                    return actions.order.capture().then(function (details) {
+                      alert(
+                        'Transaction completed by ' +
+                          details.payer.name.given_name +
+                          '!'
+                      )
+                    })
+                  },
+
+                  onError: function (err) {
+                    console.log(err)
+                  },
+                })
+                .render('#paypal-button-container')
+            }
+            initPayPalButton()
+          </script>
+        </section>
+        <section>
+          <div class="inner">
+            <h1>Featured in A/PART</h1>
+            <p id="intro-text">
+              Five creators served as sponsors, curators, and connectors to five
+              artists who inspire them; with individual ownership of how they
+              would connect and with whom. It was a chance to reconnect or to
+              build new relationships, and drive the editorial perspective of
+              the issue. Their words and works are woven together in
+              conversation in these pages.
+            </p>
+          </div>
+        </section>
+        <section id="artists">
+          <div class="inner">
+            <div class="grid">
+              <h2>Featured artists</h2>
+              <figure>
+                <img
+                  src="assets/img/artists/Jayy_Dodd_by_Kenn_Amethyst.jpg"
+                  alt=""
+                  srcset=""
+                />
+                <figcaption>
+                  <a href="https://www.jayydodd.net/"
+                    >jayy dodd
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="assets/img/artists/Joe_Whittle_NativeGrad.jpg"
+                  alt=""
+                  srcset=""
+                />
+                <figcaption>
+                  <a href="https://www.joewhittlephotography.com/"
+                    >Joe Whittle
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="assets/img/artists/RYAN!_Feddersen_PHA.jpg"
+                  alt=""
+                  srcset=""
+                />
+                <figcaption>
+                  <a href="http://ryanfeddersen.com/"
+                    >RYAN! Feddersen
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="assets/img/artists/chad_bio.jpg" alt="" srcset="" />
+                <figcaption>
+                  <a href="https://chadocreative.com/"
+                    >Chad Brown
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="assets/img/artists/Estella_Tse.jpg"
+                  alt=""
+                  srcset=""
+                  id="estella"
+                />
+                <figcaption>
+                  <a href="https://www.estellatse.com/"
+                    >Estella Tse
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <h2>Sponsoring artists <br />and organizations</h2>
+              <figure class="sponsor">
+                <img
+                  src="assets/img/artists/Maya Vivas- Headshot_UPDATED.jpg"
+                  alt=""
+                  srcset=""
+                />
+                <figcaption>
+                  <a href="http://www.mayavivas.com/"
+                    >Maya Vivas
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <figure class="sponsor">
+                <img
+                  src="assets/img/artists/Portland_In_Color.jpg"
+                  alt=""
+                  srcset=""
+                  id="color"
+                />
+                <figcaption>
+                  <a href="https://www.portlandincolor.com/"
+                    >Portland in Color
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <figure class="sponsor">
+                <img
+                  src="assets/img/artists/Ka_ila_Farrell_Smith.jpg"
+                  alt=""
+                  srcset=""
+                  id="kaila"
+                />
+                <figcaption>
+                  <a href="https://www.kailafarrellsmith.com/"
+                    >Ka'ila Farrell-Smith
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <figure class="sponsor">
+                <img
+                  src="assets/img/artists/Soul_River_bio.jpg"
+                  alt=""
+                  srcset=""
+                />
+                <figcaption>
+                  <a href="https://soulriverinc.org/"
+                    >Soul River
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+              <figure class="sponsor">
+                <img
+                  src="assets/img/artists/Marcelino_Alvarez.jpg"
+                  alt=""
+                  srcset=""
+                />
+                <figcaption>
+                  <a
+                    href="https://www.freshconsulting.com/team/marcelinoalvarez/"
+                    >Marcelino Alvarez
+                    <img class="link-icon" src="/assets/svg/external-link.svg"
+                  /></a>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+      </div>
+      <section id="colophon">
+        <div class="inner">
+          <article>
+            <h2>Creative Directors</h2>
+            <h3>
+              <a href="http://www.krbee.com/"
+                >Kristin Rogers Brown
+                <img class="link-icon" src="/assets/svg/external-link.svg"
+              /></a>
+            </h3>
+            <h3>
+              <a href="https://www.linkedin.com/in/ryan-brown-47564778/"
+                >Ryan Brown
+                <img class="link-icon" src="/assets/svg/external-link.svg"
+              /></a>
+            </h3>
+          </article>
+
+          <article>
+            <h2>Copy Editor</h2>
+            <h3>
+              <a href="https://deshewson.com/"
+                >Des Hawson
+                <img class="link-icon" src="/assets/svg/external-link.svg"
+              /></a>
+            </h3>
+          </article>
+
+          <article>
+            <h2>Board of Directors</h2>
+            <h3>Sam Beebe</h3>
+            <h3 class="description">Executive Director</h3>
+            <h3>Molly Cooney-Mesker</h3>
+            <h3 class="description">Board Chair</h3>
+            <h3>Tom Webb</h3>
+            <h3 class="description">Board Secretary & Founding Editor</h3>
+          </article>
+
+          <p>
+            The Bear is published by the nonprofit, volunteer-run organization
+            Orlo.
+          </p>
+
+          <p>
+            Made with generous support from The Kinsman Foundation and
+            additional contributions from Willamette Falls Paper Company, WCP
+            Solutions, and Brown Printing.
+          </p>
+
+          <!-- <p>
+            Made with generous support from
+            <a href="https://kinsmanfoundation.org/"
+              >The Kinsman Foundation
+              <img class="link-icon" src="/assets/svg/external-link.svg"
+            /></a>
+            and additional contributions from
+            <a href="https://www.wfpaperco.com/about/"
+              >Willamette Falls Paper Company
+              <img class="link-icon" src="/assets/svg/external-link.svg" /></a
+            >, WCP Solutions, and Brown Printing.
+          </p> -->
+        </div>
+      </section>
+      <img
+        id="footer-img"
+        src="assets/img/2021-03-18-Kristin-Rogers-Brown-085-web.jpg"
+        alt=""
+      />
+    </main>
+    <footer>
+      <div class="inner">
+        <a id="btn-orlo" class="button" href="https://orlo.org/"
+          >Continue to Orlo</a
+        >
+        <div class="container">
+          <div class="logo">
+            <span class="name">The Bear</span>
+            <span class="issue">#38: A/PART</span>
+          </div>
+          <p>&copy; <i>The Bear</i> 2021</p>
+        </div>
+        <p id="credit">
+          A/PART microsite designed and developed by
+          <a href="http://oskarradon.com"
+            >Oskar Radon
+            <img class="link-icon" src="/assets/svg/external-link.svg"
+          /></a>
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="assets/js/home.min.js"></script>
+</html>
